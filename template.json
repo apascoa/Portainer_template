@@ -1,7 +1,7 @@
 {
-    "version": "2",
-    "templates": [
-        {
+	"version": "2",
+	"templates": [
+		{
 			"category": [
 				"Video",
 				"Music",
@@ -2391,52 +2391,6 @@
 		},
 		{
 			"category": [
-				"Downloaders",
-				"Video"
-			],
-			"description": "Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.",
-			"env": [
-				{
-					"label": "PUID",
-					"name": "PUID",
-					"set": "1000"
-				},
-				{
-					"label": "PGID",
-					"name": "PGID",
-					"set": "1000"
-				},
-				{
-					"label": "TZ",
-					"name": "TZ",
-					"set": "America/Chicago"
-				}
-			],
-			"image": "linuxserver/sonarr:latest",
-			"logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/sonarr-icon.png",
-			"platform": "linux",
-			"ports": [
-				"8989/tcp"
-			],
-			"title": "sonarr",
-			"type": 1,
-			"volumes": [
-				{
-					"container": "/config"
-				},
-				{
-					"container": "/dev/rtc"
-				},
-				{
-					"container": "/tv"
-				},
-				{
-					"container": "/downloads"
-				}
-			]
-		},
-		{
-			"category": [
 				"Other",
 				"Tools"
 			],
@@ -2548,7 +2502,7 @@
 			"ports": [
 				"443/tcp"
 			],
-			"title": "nextcloud",
+			"title": "nextcloudbb",
 			"type": 1,
 			"volumes": [
 				{
@@ -2739,45 +2693,6 @@
 				{
 					"bind": "/srv/dev-disk-by-label-Files/Config/EmbyStat",
 					"container": "/config"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Downloaders",
-				"Tools"
-			],
-			"description": "Jackett works as a proxy server it translates queries from apps like Sonarr etc into tracker-site-specific http queries and parses the html response sending results back to the requesting software.[",
-			"env": [
-				{
-					"default": "998",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "100",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/jackett:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/jacket-icon.png",
-			"name": "jackett",
-			"platform": "linux",
-			"ports": [
-				"9117:9117/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Jackett",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/srv/dev-disk-by-label-Files/Config/Jackett",
-					"container": "/config"
-				},
-				{
-					"bind": "/portainer/Downloads",
-					"container": "/downloads"
 				}
 			]
 		},
@@ -3266,49 +3181,6 @@
 		},
 		{
 			"categories": [
-				"Downloaders",
-				"Video"
-			],
-			"description": "Radarr - A fork of Sonarr to work with movies Ã  la Couchpotato.",
-			"env": [
-				{
-					"default": "998",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "100",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/radarr:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/radarr.png",
-			"name": "radarr",
-			"platform": "linux",
-			"ports": [
-				"7878:7878/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Radarr",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/srv/dev-disk-by-label-Files/Config/Radarr",
-					"container": "/config"
-				},
-				{
-					"bind": "/portainer/Downloads",
-					"container": "/downloads"
-				},
-				{
-					"bind": "/portainer/Movies",
-					"container": "/movies"
-				}
-			]
-		},
-		{
-			"categories": [
 				"Management"
 			],
 			"description": null,
@@ -3476,5 +3348,5 @@
 				}
 			]
 		}
-    ]
+	]
 }
