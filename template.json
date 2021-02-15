@@ -3181,44 +3181,6 @@
 		},
 		{
 			"categories": [
-				"Management"
-			],
-			"description": null,
-			"env": [
-				{
-					"default": "998",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "100",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/smokeping:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/smokeping-icon.png",
-			"name": "smokeping",
-			"platform": "linux",
-			"ports": [
-				"80/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "SmokePing",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/srv/dev-disk-by-label-Files/Config/Smokeping",
-					"container": "/config"
-				},
-				{
-					"bind": "/portainer/Files/AppData/Smokeping",
-					"container": "/data"
-				}
-			]
-		},
-		{
-			"categories": [
 				"Downloaders",
 				"Video"
 			],
